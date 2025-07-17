@@ -1,0 +1,35 @@
+[100%] Built target autonomous_navigator
+-- Install configuration: ""
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/lib/mars_rover_navigation/autonomous_navigator
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch/
+-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_terrain_simulation.py
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gz_simulation.py
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_rover_launch.py
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gazebo_simulation.py
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config/
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//ros2_controller.yaml
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//nav2_params.yaml
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//waypoints_example.yaml
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf/
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.urdf.xacro
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.gazebo
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//materials.xacro
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds/
+-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//advanced_mars_terrain.sdf
+-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//realistic_mars_terrain.sdf
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//mars_terrain.sdf
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/package_run_dependencies/mars_rover_navigation
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/parent_prefix_path/mars_rover_navigation
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.sh
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.sh
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.dsv
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.bash
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.sh
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.zsh
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.dsv
+-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.dsv
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/packages/mars_rover_navigation
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig.cmake
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig-version.cmake
+-- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.xml

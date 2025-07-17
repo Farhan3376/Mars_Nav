@@ -1,0 +1,2 @@
+Invoking command in '/home/farhan/mars_nav/build/mars_rover_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4
+Invoked command in '/home/farhan/mars_nav/build/mars_rover_navigation' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4

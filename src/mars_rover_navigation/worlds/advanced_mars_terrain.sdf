@@ -1,0 +1,525 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="advanced_mars_terrain">
+    
+    <!-- Physics with Mars gravity -->
+    <physics name="mars_physics" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    
+    <!-- Essential plugins -->
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Mars gravity -->
+    <gravity>0 0 -3.71</gravity>
+    
+    <!-- Mars atmosphere and lighting -->
+    <scene>
+      <ambient>0.3 0.25 0.2 1.0</ambient>
+      <background>0.8 0.6 0.4 1.0</background>
+      <shadows>true</shadows>
+      <fog>
+        <color>0.8 0.6 0.4 1.0</color>
+        <type>linear</type>
+        <start>10</start>
+        <end>200</end>
+        <density>0.1</density>
+      </fog>
+    </scene>
+
+    <!-- Mars sun (dimmer and more orange) -->
+    <light type="directional" name="mars_sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>50 25 50 0 0 0</pose>
+      <diffuse>0.7 0.5 0.3 1</diffuse>
+      <specular>0.3 0.2 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.8</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.7 -0.3 -0.9</direction>
+    </light>
+
+    <!-- Secondary light for fill -->
+    <light type="directional" name="fill_light">
+      <cast_shadows>false</cast_shadows>
+      <pose>-30 -20 30 0 0 0</pose>
+      <diffuse>0.2 0.15 0.1 1</diffuse>
+      <specular>0.1 0.05 0.0 1</specular>
+      <direction>0.5 0.3 -0.8</direction>
+    </light>
+
+    <!-- Large Mars terrain base -->
+    <model name="mars_terrain_base">
+      <static>true</static>
+      <link name="terrain_link">
+        <collision name="terrain_collision">
+          <geometry>
+            <heightmap>
+              <uri>file://media/materials/textures/heightmap_bowl.png</uri>
+              <size>200 200 20</size>
+              <pos>0 0 0</pos>
+            </heightmap>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.8</mu>
+                <mu2>0.8</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="terrain_visual">
+          <geometry>
+            <heightmap>
+              <uri>file://media/materials/textures/heightmap_bowl.png</uri>
+              <size>200 200 20</size>
+              <pos>0 0 0</pos>
+              <texture>
+                <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>50</size>
+              </texture>
+            </heightmap>
+          </geometry>
+          <material>
+            <ambient>0.5 0.3 0.2 1</ambient>
+            <diffuse>0.6 0.4 0.3 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Large crater formation -->
+    <model name="large_crater">
+      <pose>-30 20 -2 0 0 0</pose>
+      <static>true</static>
+      <link name="crater_link">
+        <collision name="crater_collision">
+          <geometry>
+            <cylinder>
+              <radius>15</radius>
+              <length>4</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="crater_visual">
+          <geometry>
+            <cylinder>
+              <radius>15</radius>
+              <length>4</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.25 0.2 1</diffuse>
+            <specular>0.05 0.05 0.05 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rocky hill formation -->
+    <model name="rocky_hill_1">
+      <pose>25 -15 3 0 0 0.3</pose>
+      <static>true</static>
+      <link name="hill_link">
+        <collision name="hill_collision">
+          <geometry>
+            <mesh>
+              <uri>model://apollo15_landing_site_1000x1000/meshes/apollo15_landing_site_1000x1000.dae</uri>
+              <scale>0.02 0.02 0.01</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="hill_visual">
+          <geometry>
+            <mesh>
+              <uri>model://apollo15_landing_site_1000x1000/meshes/apollo15_landing_site_1000x1000.dae</uri>
+              <scale>0.02 0.02 0.01</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.4 0.25 0.2 1</ambient>
+            <diffuse>0.5 0.3 0.25 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Boulder field 1 -->
+    <model name="boulder_field_1">
+      <pose>12 8 0 0 0 0</pose>
+      <static>true</static>
+      
+      <!-- Large boulder -->
+      <link name="boulder_1">
+        <pose>0 0 1.2 0.2 0.1 0</pose>
+        <collision name="boulder_1_collision">
+          <geometry>
+            <sphere>
+              <radius>1.2</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="boulder_1_visual">
+          <geometry>
+            <sphere>
+              <radius>1.2</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.35 0.25 0.2 1</ambient>
+            <diffuse>0.45 0.3 0.25 1</diffuse>
+            <specular>0.15 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Medium boulders -->
+      <link name="boulder_2">
+        <pose>3 2 0.8 0.3 0.2 0.5</pose>
+        <collision name="boulder_2_collision">
+          <geometry>
+            <box>
+              <size>1.5 1.0 1.6</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="boulder_2_visual">
+          <geometry>
+            <box>
+              <size>1.5 1.0 1.6</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.3 0.2 1</ambient>
+            <diffuse>0.5 0.35 0.25 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Small rocks scattered -->
+      <link name="boulder_3">
+        <pose>-2 3 0.3 0.1 0.3 1.2</pose>
+        <collision name="boulder_3_collision">
+          <geometry>
+            <sphere>
+              <radius>0.6</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="boulder_3_visual">
+          <geometry>
+            <sphere>
+              <radius>0.6</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.25 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Scattered rocks across terrain -->
+    <model name="scattered_rocks">
+      <static>true</static>
+      
+      <!-- Rock cluster 1 -->
+      <link name="rock_cluster_1">
+        <pose>-15 -8 0.3 0 0 0</pose>
+        <collision name="rock_1_collision">
+          <geometry>
+            <cylinder>
+              <radius>0.8</radius>
+              <length>0.6</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="rock_1_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.8</radius>
+              <length>0.6</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.3 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Individual rocks -->
+      <link name="rock_2">
+        <pose>8 -12 0.2 0.5 0.2 0.8</pose>
+        <collision name="rock_2_collision">
+          <geometry>
+            <box>
+              <size>0.6 0.8 0.4</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="rock_2_visual">
+          <geometry>
+            <box>
+              <size>0.6 0.8 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.22 0.15 1</ambient>
+            <diffuse>0.45 0.28 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="rock_3">
+        <pose>-5 15 0.15 0.2 0.1 1.5</pose>
+        <collision name="rock_3_collision">
+          <geometry>
+            <sphere>
+              <radius>0.3</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="rock_3_visual">
+          <geometry>
+            <sphere>
+              <radius>0.3</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.25 0.18 0.12 1</ambient>
+            <diffuse>0.35 0.25 0.18 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="rock_4">
+        <pose>18 5 0.25 0.3 0.4 0.6</pose>
+        <collision name="rock_4_collision">
+          <geometry>
+            <box>
+              <size>0.8 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="rock_4_visual">
+          <geometry>
+            <box>
+              <size>0.8 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.32 0.2 0.14 1</ambient>
+            <diffuse>0.42 0.26 0.18 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mesa formation -->
+    <model name="mesa_formation">
+      <pose>-25 -25 2 0 0 0</pose>
+      <static>true</static>
+      <link name="mesa_link">
+        <collision name="mesa_collision">
+          <geometry>
+            <box>
+              <size>12 8 4</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="mesa_visual">
+          <geometry>
+            <box>
+              <size>12 8 4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.25 0.18 1</ambient>
+            <diffuse>0.5 0.32 0.22 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Sand dune -->
+    <model name="sand_dune">
+      <pose>30 25 1 0 0 0.8</pose>
+      <static>true</static>
+      <link name="dune_link">
+        <collision name="dune_collision">
+          <geometry>
+            <sphere>
+              <radius>8</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="dune_visual">
+          <geometry>
+            <sphere>
+              <radius>8</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.5 0.35 0.25 1</ambient>
+            <diffuse>0.6 0.4 0.3 1</diffuse>
+            <specular>0.05 0.05 0.05 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Navigation challenges - narrow passages -->
+    <model name="rock_gate_1">
+      <pose>5 -5 0 0 0 0</pose>
+      <static>true</static>
+      
+      <link name="gate_rock_left">
+        <pose>-1.5 0 1 0 0 0</pose>
+        <collision name="gate_left_collision">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="gate_left_visual">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.25 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="gate_rock_right">
+        <pose>1.5 0 1 0 0 0</pose>
+        <collision name="gate_right_collision">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="gate_right_visual">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.25 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Small scattered pebbles for realism -->
+    <model name="pebble_field">
+      <static>true</static>
+      
+      <link name="pebble_1">
+        <pose>2 3 0.05 0 0 0</pose>
+        <collision name="pebble_1_collision">
+          <geometry>
+            <sphere>
+              <radius>0.1</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="pebble_1_visual">
+          <geometry>
+            <sphere>
+              <radius>0.1</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.25 0.18 0.12 1</ambient>
+            <diffuse>0.35 0.25 0.18 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="pebble_2">
+        <pose>-3 1 0.05 0 0 0</pose>
+        <collision name="pebble_2_collision">
+          <geometry>
+            <sphere>
+              <radius>0.08</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="pebble_2_visual">
+          <geometry>
+            <sphere>
+              <radius>0.08</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.28 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="pebble_3">
+        <pose>1 -2 0.03 0 0 0</pose>
+        <collision name="pebble_3_collision">
+          <geometry>
+            <sphere>
+              <radius>0.06</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="pebble_3_visual">
+          <geometry>
+            <sphere>
+              <radius>0.06</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.28 0.19 0.13 1</ambient>
+            <diffuse>0.38 0.26 0.19 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

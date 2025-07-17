@@ -1,0 +1,41 @@
+[0.040s] Invoking command in '/home/farhan/mars_nav/build/mars_rover_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4
+[0.208s] [100%] Built target autonomous_navigator
+[0.238s] Invoked command in '/home/farhan/mars_nav/build/mars_rover_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4
+[0.264s] Invoking command in '/home/farhan/mars_nav/build/mars_rover_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/farhan/mars_nav/build/mars_rover_navigation
+[0.286s] -- Install configuration: ""
+[0.286s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/lib/mars_rover_navigation/autonomous_navigator
+[0.287s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch/
+[0.287s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_terrain_simulation.py
+[0.288s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gz_simulation.py
+[0.288s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_rover_launch.py
+[0.288s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gazebo_simulation.py
+[0.289s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//photorealistic_mars.py
+[0.289s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config/
+[0.289s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//ros2_controller.yaml
+[0.289s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//nav2_params.yaml
+[0.290s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//waypoints_example.yaml
+[0.290s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf/
+[0.290s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.urdf.xacro
+[0.290s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.gazebo
+[0.290s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//materials.xacro
+[0.291s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds/
+[0.291s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//advanced_mars_terrain.sdf
+[0.291s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//photorealistic_mars.sdf
+[0.291s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//realistic_mars_terrain.sdf
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//mars_terrain.sdf
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/package_run_dependencies/mars_rover_navigation
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/parent_prefix_path/mars_rover_navigation
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.sh
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.dsv
+[0.292s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.sh
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.dsv
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.bash
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.sh
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.zsh
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.dsv
+[0.293s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.dsv
+[0.293s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/packages/mars_rover_navigation
+[0.294s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig.cmake
+[0.294s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig-version.cmake
+[0.294s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.xml
+[0.295s] Invoked command in '/home/farhan/mars_nav/build/mars_rover_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/farhan/mars_nav/build/mars_rover_navigation

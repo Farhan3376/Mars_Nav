@@ -1,0 +1,253 @@
+[0.000000] (-) TimerEvent: {}
+[0.000318] (mars_rover_navigation) JobQueued: {'identifier': 'mars_rover_navigation', 'dependencies': OrderedDict()}
+[0.000406] (mars_rover_navigation) JobStarted: {'identifier': 'mars_rover_navigation'}
+[0.027932] (mars_rover_navigation) JobProgress: {'identifier': 'mars_rover_navigation', 'progress': 'cmake'}
+[0.028761] (mars_rover_navigation) Command: {'cmd': ['/usr/bin/cmake', '/home/farhan/mars_nav/src/mars_rover_navigation', '-DCMAKE_INSTALL_PREFIX=/home/farhan/mars_nav/install/mars_rover_navigation'], 'cwd': '/home/farhan/mars_nav/build/mars_rover_navigation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'farhan', 'LC_TIME': 'ur_PK', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:', 'HOME': '/home/farhan', 'OLDPWD': '/home/farhan/mars_nav/src/mars_rover_navigation', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ur_PK', 'SYSTEMD_EXEC_PID': '3139', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'farhan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'AL_DIR': '/home/farhan/naoqi-sdk-2.5.5.5-linux64', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'farhan', 'TERM': 'xterm-256color', 'COPPELIASIM_ROOT_DIR': '/home/farhan/Downloads/CoppeliaSim_Edu_V4_10_0_rev0_Ubuntu24_04', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/farhan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/farhan-HP-EliteBook-840-G3:@/tmp/.ICE-unix/3105,unix/farhan-HP-EliteBook-840-G3:/tmp/.ICE-unix/3105', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/home/farhan/dds_profiles/fastdds_profile.xml', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ur_PK', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/973df98b_fbe4_4884_b558_3cc9ecec52e1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ur_PK', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.282', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'RMW_FASTRTPS_USE_QOS_FROM_XML': '0', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LC_MEASUREMENT': 'ur_PK', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'ur_PK', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/farhan/mars_nav/build/mars_rover_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.098840] (-) TimerEvent: {}
+[0.148466] (mars_rover_navigation) StdoutLine: {'line': b'-- The C compiler identification is GNU 12.3.0\n'}
+[0.198950] (-) TimerEvent: {}
+[0.265008] (mars_rover_navigation) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 12.3.0\n'}
+[0.298825] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299181] (-) TimerEvent: {}
+[0.399527] (-) TimerEvent: {}
+[0.499987] (-) TimerEvent: {}
+[0.537332] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.559924] (mars_rover_navigation) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.560520] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.561461] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.584305] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600176] (-) TimerEvent: {}
+[0.700684] (-) TimerEvent: {}
+[0.801102] (-) TimerEvent: {}
+[0.839588] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.861589] (mars_rover_navigation) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.862206] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.863209] (mars_rover_navigation) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.875353] (mars_rover_navigation) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.901219] (-) TimerEvent: {}
+[1.001572] (-) TimerEvent: {}
+[1.101930] (-) TimerEvent: {}
+[1.202278] (-) TimerEvent: {}
+[1.269265] (mars_rover_navigation) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.302386] (-) TimerEvent: {}
+[1.402691] (-) TimerEvent: {}
+[1.502998] (-) TimerEvent: {}
+[1.594128] (mars_rover_navigation) StdoutLine: {'line': b'-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.603103] (-) TimerEvent: {}
+[1.703410] (-) TimerEvent: {}
+[1.724902] (mars_rover_navigation) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.770939] (mars_rover_navigation) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.803539] (-) TimerEvent: {}
+[1.824246] (mars_rover_navigation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.875127] (mars_rover_navigation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.903665] (-) TimerEvent: {}
+[2.003958] (-) TimerEvent: {}
+[2.078719] (mars_rover_navigation) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[2.089690] (mars_rover_navigation) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.104078] (-) TimerEvent: {}
+[2.204452] (-) TimerEvent: {}
+[2.304817] (-) TimerEvent: {}
+[2.308976] (mars_rover_navigation) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[2.376825] (mars_rover_navigation) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[2.404974] (-) TimerEvent: {}
+[2.450063] (mars_rover_navigation) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.505088] (-) TimerEvent: {}
+[2.605466] (-) TimerEvent: {}
+[2.647267] (mars_rover_navigation) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[2.686148] (mars_rover_navigation) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[2.705582] (-) TimerEvent: {}
+[2.728530] (mars_rover_navigation) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.789253] (mars_rover_navigation) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[2.805694] (-) TimerEvent: {}
+[2.906025] (-) TimerEvent: {}
+[3.006531] (-) TimerEvent: {}
+[3.100128] (mars_rover_navigation) StdoutLine: {'line': b'-- Configuring done (3.0s)\n'}
+[3.106642] (-) TimerEvent: {}
+[3.136166] (mars_rover_navigation) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.146280] (mars_rover_navigation) StdoutLine: {'line': b'-- Build files have been written to: /home/farhan/mars_nav/build/mars_rover_navigation\n'}
+[3.171382] (mars_rover_navigation) CommandEnded: {'returncode': 0}
+[3.172561] (mars_rover_navigation) JobProgress: {'identifier': 'mars_rover_navigation', 'progress': 'build'}
+[3.174524] (mars_rover_navigation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/farhan/mars_nav/build/mars_rover_navigation', '--', '-j4', '-l4'], 'cwd': '/home/farhan/mars_nav/build/mars_rover_navigation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'farhan', 'LC_TIME': 'ur_PK', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:', 'HOME': '/home/farhan', 'OLDPWD': '/home/farhan/mars_nav/src/mars_rover_navigation', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ur_PK', 'SYSTEMD_EXEC_PID': '3139', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'farhan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'AL_DIR': '/home/farhan/naoqi-sdk-2.5.5.5-linux64', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'farhan', 'TERM': 'xterm-256color', 'COPPELIASIM_ROOT_DIR': '/home/farhan/Downloads/CoppeliaSim_Edu_V4_10_0_rev0_Ubuntu24_04', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/farhan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/farhan-HP-EliteBook-840-G3:@/tmp/.ICE-unix/3105,unix/farhan-HP-EliteBook-840-G3:/tmp/.ICE-unix/3105', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/home/farhan/dds_profiles/fastdds_profile.xml', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ur_PK', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/973df98b_fbe4_4884_b558_3cc9ecec52e1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ur_PK', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.282', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'RMW_FASTRTPS_USE_QOS_FROM_XML': '0', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LC_MEASUREMENT': 'ur_PK', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'ur_PK', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/farhan/mars_nav/build/mars_rover_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[3.206772] (-) TimerEvent: {}
+[3.307165] (-) TimerEvent: {}
+[3.320656] (mars_rover_navigation) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/autonomous_navigator.dir/src/autonomous_navigator.cpp.o\x1b[0m\n'}
+[3.407326] (-) TimerEvent: {}
+[3.507820] (-) TimerEvent: {}
+[3.608356] (-) TimerEvent: {}
+[3.708772] (-) TimerEvent: {}
+[3.809167] (-) TimerEvent: {}
+[3.909605] (-) TimerEvent: {}
+[4.010009] (-) TimerEvent: {}
+[4.110422] (-) TimerEvent: {}
+[4.210870] (-) TimerEvent: {}
+[4.311387] (-) TimerEvent: {}
+[4.412083] (-) TimerEvent: {}
+[4.512737] (-) TimerEvent: {}
+[4.614538] (-) TimerEvent: {}
+[4.714964] (-) TimerEvent: {}
+[4.817559] (-) TimerEvent: {}
+[4.918080] (-) TimerEvent: {}
+[5.018605] (-) TimerEvent: {}
+[5.120843] (-) TimerEvent: {}
+[5.222376] (-) TimerEvent: {}
+[5.322881] (-) TimerEvent: {}
+[5.425560] (-) TimerEvent: {}
+[5.525910] (-) TimerEvent: {}
+[5.626297] (-) TimerEvent: {}
+[5.726765] (-) TimerEvent: {}
+[5.827134] (-) TimerEvent: {}
+[5.927531] (-) TimerEvent: {}
+[6.028135] (-) TimerEvent: {}
+[6.128609] (-) TimerEvent: {}
+[6.229010] (-) TimerEvent: {}
+[6.329423] (-) TimerEvent: {}
+[6.429820] (-) TimerEvent: {}
+[6.530250] (-) TimerEvent: {}
+[6.630629] (-) TimerEvent: {}
+[6.731017] (-) TimerEvent: {}
+[6.831469] (-) TimerEvent: {}
+[6.931875] (-) TimerEvent: {}
+[7.032305] (-) TimerEvent: {}
+[7.132713] (-) TimerEvent: {}
+[7.233106] (-) TimerEvent: {}
+[7.333531] (-) TimerEvent: {}
+[7.433956] (-) TimerEvent: {}
+[7.534328] (-) TimerEvent: {}
+[7.634735] (-) TimerEvent: {}
+[7.735153] (-) TimerEvent: {}
+[7.835611] (-) TimerEvent: {}
+[7.935928] (-) TimerEvent: {}
+[8.036307] (-) TimerEvent: {}
+[8.136660] (-) TimerEvent: {}
+[8.237004] (-) TimerEvent: {}
+[8.337409] (-) TimerEvent: {}
+[8.437745] (-) TimerEvent: {}
+[8.538121] (-) TimerEvent: {}
+[8.638508] (-) TimerEvent: {}
+[8.738858] (-) TimerEvent: {}
+[8.839275] (-) TimerEvent: {}
+[8.939637] (-) TimerEvent: {}
+[9.040034] (-) TimerEvent: {}
+[9.140527] (-) TimerEvent: {}
+[9.241051] (-) TimerEvent: {}
+[9.341566] (-) TimerEvent: {}
+[9.442298] (-) TimerEvent: {}
+[9.542733] (-) TimerEvent: {}
+[9.643118] (-) TimerEvent: {}
+[9.743695] (-) TimerEvent: {}
+[9.844089] (-) TimerEvent: {}
+[9.944534] (-) TimerEvent: {}
+[10.044877] (-) TimerEvent: {}
+[10.145250] (-) TimerEvent: {}
+[10.245595] (-) TimerEvent: {}
+[10.345919] (-) TimerEvent: {}
+[10.446285] (-) TimerEvent: {}
+[10.546638] (-) TimerEvent: {}
+[10.646949] (-) TimerEvent: {}
+[10.747272] (-) TimerEvent: {}
+[10.847601] (-) TimerEvent: {}
+[10.947922] (-) TimerEvent: {}
+[11.048226] (-) TimerEvent: {}
+[11.148559] (-) TimerEvent: {}
+[11.249091] (-) TimerEvent: {}
+[11.349457] (-) TimerEvent: {}
+[11.449784] (-) TimerEvent: {}
+[11.550107] (-) TimerEvent: {}
+[11.650500] (-) TimerEvent: {}
+[11.750875] (-) TimerEvent: {}
+[11.851332] (-) TimerEvent: {}
+[11.951689] (-) TimerEvent: {}
+[12.052055] (-) TimerEvent: {}
+[12.152448] (-) TimerEvent: {}
+[12.252821] (-) TimerEvent: {}
+[12.353194] (-) TimerEvent: {}
+[12.453597] (-) TimerEvent: {}
+[12.553972] (-) TimerEvent: {}
+[12.654331] (-) TimerEvent: {}
+[12.754845] (-) TimerEvent: {}
+[12.855330] (-) TimerEvent: {}
+[12.955780] (-) TimerEvent: {}
+[13.056248] (-) TimerEvent: {}
+[13.159490] (-) TimerEvent: {}
+[13.262323] (-) TimerEvent: {}
+[13.362739] (-) TimerEvent: {}
+[13.463226] (-) TimerEvent: {}
+[13.563745] (-) TimerEvent: {}
+[13.664317] (-) TimerEvent: {}
+[13.764829] (-) TimerEvent: {}
+[13.865322] (-) TimerEvent: {}
+[13.965700] (-) TimerEvent: {}
+[14.066058] (-) TimerEvent: {}
+[14.167902] (-) TimerEvent: {}
+[14.268422] (-) TimerEvent: {}
+[14.368892] (-) TimerEvent: {}
+[14.471652] (-) TimerEvent: {}
+[14.572048] (-) TimerEvent: {}
+[14.672450] (-) TimerEvent: {}
+[14.772841] (-) TimerEvent: {}
+[14.873262] (-) TimerEvent: {}
+[14.973579] (-) TimerEvent: {}
+[15.073900] (-) TimerEvent: {}
+[15.174222] (-) TimerEvent: {}
+[15.274558] (-) TimerEvent: {}
+[15.374875] (-) TimerEvent: {}
+[15.475221] (-) TimerEvent: {}
+[15.575582] (-) TimerEvent: {}
+[15.675927] (-) TimerEvent: {}
+[15.776273] (-) TimerEvent: {}
+[15.876631] (-) TimerEvent: {}
+[15.977048] (-) TimerEvent: {}
+[16.077397] (-) TimerEvent: {}
+[16.177725] (-) TimerEvent: {}
+[16.278044] (-) TimerEvent: {}
+[16.378423] (-) TimerEvent: {}
+[16.478801] (-) TimerEvent: {}
+[16.579217] (-) TimerEvent: {}
+[16.679594] (-) TimerEvent: {}
+[16.779990] (-) TimerEvent: {}
+[16.866784] (mars_rover_navigation) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable autonomous_navigator\x1b[0m\n'}
+[16.880135] (-) TimerEvent: {}
+[16.980605] (-) TimerEvent: {}
+[17.080968] (-) TimerEvent: {}
+[17.181340] (-) TimerEvent: {}
+[17.281680] (-) TimerEvent: {}
+[17.382065] (-) TimerEvent: {}
+[17.482438] (-) TimerEvent: {}
+[17.544000] (mars_rover_navigation) StdoutLine: {'line': b'[100%] Built target autonomous_navigator\n'}
+[17.574100] (mars_rover_navigation) CommandEnded: {'returncode': 0}
+[17.575497] (mars_rover_navigation) JobProgress: {'identifier': 'mars_rover_navigation', 'progress': 'install'}
+[17.582555] (-) TimerEvent: {}
+[17.602804] (mars_rover_navigation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/farhan/mars_nav/build/mars_rover_navigation'], 'cwd': '/home/farhan/mars_nav/build/mars_rover_navigation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'farhan', 'LC_TIME': 'ur_PK', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib:', 'HOME': '/home/farhan', 'OLDPWD': '/home/farhan/mars_nav/src/mars_rover_navigation', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ur_PK', 'SYSTEMD_EXEC_PID': '3139', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'farhan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'AL_DIR': '/home/farhan/naoqi-sdk-2.5.5.5-linux64', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'farhan', 'TERM': 'xterm-256color', 'COPPELIASIM_ROOT_DIR': '/home/farhan/Downloads/CoppeliaSim_Edu_V4_10_0_rev0_Ubuntu24_04', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/farhan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/farhan-HP-EliteBook-840-G3:@/tmp/.ICE-unix/3105,unix/farhan-HP-EliteBook-840-G3:/tmp/.ICE-unix/3105', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/home/farhan/dds_profiles/fastdds_profile.xml', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ur_PK', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/973df98b_fbe4_4884_b558_3cc9ecec52e1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ur_PK', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.282', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'RMW_FASTRTPS_USE_QOS_FROM_XML': '0', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LC_MEASUREMENT': 'ur_PK', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'ur_PK', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/farhan/mars_nav/build/mars_rover_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi-sdk-2.5.5.5-linux64/lib/python3.10/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:/home/farhan/naoqi/pynaoqi-python2.7-2.1.4.13-linux64/lib/python2.7/site-packages:', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/farhan/turtlebot3_ws/install/turtlebot3_simulations:/home/farhan/turtlebot3_ws/install/turtlebot3_gazebo:/home/farhan/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[17.625492] (mars_rover_navigation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.626010] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/lib/mars_rover_navigation/autonomous_navigator\n'}
+[17.629484] (mars_rover_navigation) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/farhan/mars_nav/install/mars_rover_navigation/lib/mars_rover_navigation/autonomous_navigator" to ""\n'}
+[17.630004] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch/\n'}
+[17.630325] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_rover_launch.py\n'}
+[17.630973] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config/\n'}
+[17.631515] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//ros2_controller.yaml\n'}
+[17.631815] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//nav2_params.yaml\n'}
+[17.632130] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//waypoints_example.yaml\n'}
+[17.632632] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf/\n'}
+[17.632956] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.urdf.xacro\n'}
+[17.633228] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.gazebo\n'}
+[17.633557] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//materials.xacro\n'}
+[17.634118] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds/\n'}
+[17.634655] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/package_run_dependencies/mars_rover_navigation\n'}
+[17.635093] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/parent_prefix_path/mars_rover_navigation\n'}
+[17.635504] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.sh\n'}
+[17.635981] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.dsv\n'}
+[17.636416] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.sh\n'}
+[17.636808] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.dsv\n'}
+[17.637327] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.bash\n'}
+[17.637764] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.sh\n'}
+[17.638196] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.zsh\n'}
+[17.638611] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.dsv\n'}
+[17.639046] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.dsv\n'}
+[17.639470] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/packages/mars_rover_navigation\n'}
+[17.639967] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig.cmake\n'}
+[17.640329] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig-version.cmake\n'}
+[17.640759] (mars_rover_navigation) StdoutLine: {'line': b'-- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.xml\n'}
+[17.644290] (mars_rover_navigation) CommandEnded: {'returncode': 0}
+[17.682896] (-) TimerEvent: {}
+[17.687297] (mars_rover_navigation) JobEnded: {'identifier': 'mars_rover_navigation', 'rc': 0}
+[17.690090] (-) EventReactorShutdown: {}

@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<robot name="mars_rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="base_mass" value="15" />
+  <xacro:property name="base_width" value="0.8"/>
+  <xacro:property name="base_length" value="1.2"/>
+  <xacro:property name="base_height" value="0.3"/>
+  <xacro:property name="wheel_mass" value="2.5" />
+  <xacro:property name="wheel_len" value="0.15"/>
+  <xacro:property name="wheel_radius" value="0.25"/>
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+      <material name="orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${base_mass}"/>
+      <inertia
+        ixx="${base_mass / 12.0 * (base_width*base_width + base_height*base_height)}" ixy="0.0" ixz="0.0"
+        iyy="${base_mass / 12.0 * (base_height*base_height + base_length*base_length)}" iyz="0.0"
+        izz="${base_mass / 12.0 * (base_width*base_width + base_length*base_length)}"/>
+    </inertial>
+  </link>
+
+  <!-- Right Wheel -->
+  <joint name="right_wheel_hinge" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -${base_width/2 + wheel_len/2} -${base_height/2}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.2"/>
+  </joint>
+
+  <link name="right_wheel">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <mass value="${wheel_mass}"/>
+      <inertia
+        ixx="${wheel_mass / 12.0 * (3*wheel_radius + wheel_len*wheel_len)}" ixy="0.0" ixz="0.0"
+        iyy="${wheel_mass / 12.0 * wheel_radius*wheel_radius}" iyz="0.0"
+        izz="${wheel_mass / 12.0 * (3*wheel_radius + wheel_len*wheel_len)}"/>
+    </inertial>
+  </link>
+
+  <!-- Left Wheel -->
+  <joint name="left_wheel_hinge" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 ${base_width/2 + wheel_len/2} -${base_height/2}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.2"/>
+  </joint>
+
+  <link name="left_wheel">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <mass value="${wheel_mass}"/>
+      <inertia
+        ixx="${wheel_mass / 12.0 * (3*wheel_radius + wheel_len*wheel_len)}" ixy="0.0" ixz="0.0"
+        iyy="${wheel_mass / 12.0 * wheel_radius*wheel_radius}" iyz="0.0"
+        izz="${wheel_mass / 12.0 * (3*wheel_radius + wheel_len*wheel_len)}"/>
+    </inertial>
+  </link>
+
+  <!-- Lidar -->
+  <joint name="lidar_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 0.4" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+  </joint>
+
+  <link name="lidar_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="0.125" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+
+  <!-- Gazebo plugins for new Gazebo -->
+  <gazebo reference="base_link">
+    <material>
+      <ambient>1.0 0.4 0.0 1.0</ambient>
+      <diffuse>1.0 0.4 0.0 1.0</diffuse>
+    </material>
+  </gazebo>
+
+  <gazebo reference="right_wheel">
+    <material>
+      <ambient>0.2 0.2 0.2 1.0</ambient>
+      <diffuse>0.2 0.2 0.2 1.0</diffuse>
+    </material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+
+  <gazebo reference="left_wheel">
+    <material>
+      <ambient>0.2 0.2 0.2 1.0</ambient>
+      <diffuse>0.2 0.2 0.2 1.0</diffuse>
+    </material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+
+  <gazebo reference="lidar_link">
+    <material>
+      <ambient>0.0 0.0 1.0 1.0</ambient>
+      <diffuse>0.0 0.0 1.0 1.0</diffuse>
+    </material>
+  </gazebo>
+
+  <!-- LiDAR sensor plugin for new Gazebo -->
+  <gazebo reference="lidar_link">
+    <sensor name="gpu_lidar" type="gpu_lidar">
+      <pose>0 0 0 0 0 0</pose>
+      <topic>scan</topic>
+      <update_rate>10</update_rate>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>640</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.396263</min_angle>
+            <max_angle>1.396263</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <resolution>0.01</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.08</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </lidar>
+      <alwaysOn>1</alwaysOn>
+      <visualize>true</visualize>
+    </sensor>
+  </gazebo>
+
+  <!-- Differential drive plugin for new Gazebo -->
+  <gazebo>
+    <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>left_wheel_hinge</left_joint>
+      <right_joint>right_wheel_hinge</right_joint>
+      <wheel_separation>0.95</wheel_separation>
+      <wheel_radius>0.25</wheel_radius>
+      <odom_publish_frequency>30</odom_publish_frequency>
+      <topic>cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+    </plugin>
+  </gazebo>
+
+</robot>

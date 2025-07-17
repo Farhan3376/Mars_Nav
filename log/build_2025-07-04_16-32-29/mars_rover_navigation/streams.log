@@ -1,0 +1,52 @@
+[0.034s] Invoking command in '/home/farhan/mars_nav/build/mars_rover_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4
+[0.103s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.677s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.769s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.791s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.822s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.858s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.995s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.997s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.172s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.343s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.375s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.417s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.478s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.792s] -- Configuring done (1.7s)
+[1.829s] -- Generating done (0.0s)
+[1.839s] -- Build files have been written to: /home/farhan/mars_nav/build/mars_rover_navigation
+[1.971s] [100%] Built target autonomous_navigator
+[2.003s] Invoked command in '/home/farhan/mars_nav/build/mars_rover_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/farhan/mars_nav/build/mars_rover_navigation -- -j4 -l4
+[2.033s] Invoking command in '/home/farhan/mars_nav/build/mars_rover_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/farhan/mars_nav/build/mars_rover_navigation
+[2.059s] -- Install configuration: ""
+[2.060s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/lib/mars_rover_navigation/autonomous_navigator
+[2.060s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch/
+[2.061s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gz_simulation.py
+[2.062s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//mars_rover_launch.py
+[2.062s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/launch//gazebo_simulation.py
+[2.063s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config/
+[2.063s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//ros2_controller.yaml
+[2.064s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//nav2_params.yaml
+[2.064s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/config//waypoints_example.yaml
+[2.064s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf/
+[2.065s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.urdf.xacro
+[2.065s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//mars_rover.gazebo
+[2.066s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/urdf//materials.xacro
+[2.066s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds/
+[2.066s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/worlds//mars_terrain.sdf
+[2.067s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/package_run_dependencies/mars_rover_navigation
+[2.067s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/parent_prefix_path/mars_rover_navigation
+[2.068s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.sh
+[2.068s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/ament_prefix_path.dsv
+[2.068s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.sh
+[2.069s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/environment/path.dsv
+[2.069s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.bash
+[2.070s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.sh
+[2.070s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.zsh
+[2.070s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/local_setup.dsv
+[2.070s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.dsv
+[2.071s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/ament_index/resource_index/packages/mars_rover_navigation
+[2.071s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig.cmake
+[2.071s] -- Up-to-date: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/cmake/mars_rover_navigationConfig-version.cmake
+[2.071s] -- Installing: /home/farhan/mars_nav/install/mars_rover_navigation/share/mars_rover_navigation/package.xml
+[2.073s] Invoked command in '/home/farhan/mars_nav/build/mars_rover_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/farhan/mars_nav/build/mars_rover_navigation

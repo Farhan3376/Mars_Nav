@@ -1,0 +1,10 @@
+[0.037s] Invoking command in '/home/farhan/mars_nav/src/build/mars_rover_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/farhan/mars_nav/src/mars_rover_navigation -DCMAKE_INSTALL_PREFIX=/home/farhan/mars_nav/src/install/mars_rover_navigation
+[0.120s] [33mCMake Warning:
+[0.121s]   Ignoring extra path from command line:
+[0.121s] 
+[0.122s]    "/home/farhan/mars_nav/src/mars_rover_navigation"
+[0.122s] 
+[0.123s] [0m
+[0.124s] [0mCMake Error: The source directory "/home/farhan/mars_nav/src/mars_rover_navigation" does not appear to contain CMakeLists.txt.
+[0.125s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.136s] Invoked command in '/home/farhan/mars_nav/src/build/mars_rover_navigation' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/farhan/mars_nav/src/mars_rover_navigation -DCMAKE_INSTALL_PREFIX=/home/farhan/mars_nav/src/install/mars_rover_navigation

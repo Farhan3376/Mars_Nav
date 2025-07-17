@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="realistic_mars_terrain">
+    
+    <physics name="mars_physics" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Mars gravity (38% of Earth's) -->
+    <gravity>0 0 -3.71</gravity>
+    
+    <!-- Mars atmosphere and lighting -->
+    <scene>
+      <ambient>0.35 0.28 0.22 1.0</ambient>
+      <background>0.85 0.65 0.45 1.0</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Mars sun -->
+    <light type="directional" name="mars_sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>40 20 30 0 0 0</pose>
+      <diffuse>0.8 0.6 0.4 1</diffuse>
+      <specular>0.3 0.2 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.6 -0.2 -0.8</direction>
+    </light>
+
+    <!-- Ground plane with Mars texture -->
+    <model name="mars_ground">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>200 200</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.8</mu>
+                <mu2>0.8</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>200 200</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.5 0.32 0.25 1</ambient>
+            <diffuse>0.6 0.38 0.3 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Large impact crater -->
+    <model name="impact_crater">
+      <pose>-20 15 -1.5 0 0 0</pose>
+      <static>true</static>
+      <link name="crater_rim">
+        <collision name="crater_rim_collision">
+          <geometry>
+            <cylinder>
+              <radius>12</radius>
+              <length>3</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="crater_rim_visual">
+          <geometry>
+            <cylinder>
+              <radius>12</radius>
+              <length>3</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.35 0.25 0.2 1</ambient>
+            <diffuse>0.45 0.3 0.25 1</diffuse>
+            <specular>0.05 0.05 0.05 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Crater center (deeper) -->
+      <link name="crater_center">
+        <pose>0 0 -2 0 0 0</pose>
+        <collision name="crater_center_collision">
+          <geometry>
+            <cylinder>
+              <radius>8</radius>
+              <length>4</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="crater_center_visual">
+          <geometry>
+            <cylinder>
+              <radius>8</radius>
+              <length>4</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.25 0.2 1</diffuse>
+            <specular>0.02 0.02 0.02 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Boulder field with various sized rocks -->
+    <model name="boulder_field">
+      <static>true</static>
+      
+      <!-- Large boulder -->
+      <link name="large_boulder">
+        <pose>15 10 1.5 0.1 0.2 0.3</pose>
+        <collision name="large_boulder_collision">
+          <geometry>
+            <sphere>
+              <radius>1.5</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="large_boulder_visual">
+          <geometry>
+            <sphere>
+              <radius>1.5</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.4 0.28 0.22 1</ambient>
+            <diffuse>0.5 0.35 0.28 1</diffuse>
+            <specular>0.15 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Medium boulders -->
+      <link name="medium_boulder_1">
+        <pose>12 7 0.8 0.2 0.1 0.8</pose>
+        <collision name="medium_boulder_1_collision">
+          <geometry>
+            <box>
+              <size>1.6 1.2 1.6</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="medium_boulder_1_visual">
+          <geometry>
+            <box>
+              <size>1.6 1.2 1.6</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.38 0.26 0.2 1</ambient>
+            <diffuse>0.48 0.33 0.26 1</diffuse>
+            <specular>0.12 0.08 0.08 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="medium_boulder_2">
+        <pose>18 13 0.6 0.3 0.4 1.2</pose>
+        <collision name="medium_boulder_2_collision">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>1.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="medium_boulder_2_visual">
+          <geometry>
+            <cylinder>
+              <radius>1.0</radius>
+              <length>1.2</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.36 0.24 0.18 1</ambient>
+            <diffuse>0.46 0.31 0.24 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rocky outcrops -->
+    <model name="rock_outcrop_1">
+      <pose>-10 -8 1 0 0 0.5</pose>
+      <static>true</static>
+      <link name="outcrop_link">
+        <collision name="outcrop_collision">
+          <geometry>
+            <box>
+              <size>8 3 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="outcrop_visual">
+          <geometry>
+            <box>
+              <size>8 3 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.42 0.3 0.24 1</ambient>
+            <diffuse>0.52 0.37 0.3 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Scattered navigation obstacles -->
+    <model name="navigation_obstacles">
+      <static>true</static>
+      
+      <link name="obstacle_1">
+        <pose>5 -3 0.4 0.1 0.2 0.8</pose>
+        <collision name="obstacle_1_collision">
+          <geometry>
+            <sphere>
+              <radius>0.8</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="obstacle_1_visual">
+          <geometry>
+            <sphere>
+              <radius>0.8</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.32 0.22 0.16 1</ambient>
+            <diffuse>0.42 0.29 0.22 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="obstacle_2">
+        <pose>-5 5 0.3 0.3 0.1 1.5</pose>
+        <collision name="obstacle_2_collision">
+          <geometry>
+            <box>
+              <size>1.2 0.8 0.6</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="obstacle_2_visual">
+          <geometry>
+            <box>
+              <size>1.2 0.8 0.6</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.34 0.24 0.18 1</ambient>
+            <diffuse>0.44 0.31 0.24 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="obstacle_3">
+        <pose>8 2 0.25 0.2 0.3 0.6</pose>
+        <collision name="obstacle_3_collision">
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.5</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="obstacle_3_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.2 0.15 1</ambient>
+            <diffuse>0.4 0.27 0.21 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Raised plateau -->
+    <model name="plateau">
+      <pose>25 -20 2 0 0 0.2</pose>
+      <static>true</static>
+      <link name="plateau_link">
+        <collision name="plateau_collision">
+          <geometry>
+            <box>
+              <size>15 10 4</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="plateau_visual">
+          <geometry>
+            <box>
+              <size>15 10 4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.45 0.32 0.26 1</ambient>
+            <diffuse>0.55 0.39 0.32 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Additional scattered rocks for navigation challenges -->
+    <model name="scattered_rocks">
+      <static>true</static>
+      
+      <link name="rock_1">
+        <pose>3 8 0.2 0.1 0.2 0.5</pose>
+        <collision name="rock_1_collision">
+          <geometry>
+            <sphere>
+              <radius>0.4</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="rock_1_visual">
+          <geometry>
+            <sphere>
+              <radius>0.4</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.35 0.25 0.18 1</ambient>
+            <diffuse>0.45 0.32 0.24 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="rock_2">
+        <pose>-8 2 0.15 0.2 0.1 1.0</pose>
+        <collision name="rock_2_collision">
+          <geometry>
+            <box>
+              <size>0.6 0.4 0.3</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="rock_2_visual">
+          <geometry>
+            <box>
+              <size>0.6 0.4 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.33 0.23 0.17 1</ambient>
+            <diffuse>0.43 0.3 0.23 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      
+      <link name="rock_3">
+        <pose>-2 -12 0.3 0.3 0.2 0.8</pose>
+        <collision name="rock_3_collision">
+          <geometry>
+            <cylinder>
+              <radius>0.6</radius>
+              <length>0.6</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="rock_3_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.6</radius>
+              <length>0.6</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.37 0.26 0.19 1</ambient>
+            <diffuse>0.47 0.33 0.25 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

@@ -1,0 +1,162 @@
+# Mars Rover Exploration Waypoints
+# This file defines a series of waypoints for autonomous Mars exploration
+
+waypoints:
+  # Initial exploration phase - survey the immediate area
+  - name: "survey_point_1"
+    x: 3.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    description: "Initial forward survey point"
+    
+  - name: "survey_point_2"
+    x: 3.0
+    y: 3.0
+    z: 0.0
+    yaw: 1.57  # 90 degrees
+    description: "Right side survey point"
+    
+  - name: "survey_point_3"
+    x: 0.0
+    y: 3.0
+    z: 0.0
+    yaw: 3.14  # 180 degrees
+    description: "Back side survey point"
+    
+  - name: "survey_point_4"
+    x: -3.0
+    y: 3.0
+    z: 0.0
+    yaw: 3.14
+    description: "Left back survey point"
+    
+  - name: "survey_point_5"
+    x: -3.0
+    y: 0.0
+    z: 0.0
+    yaw: -1.57  # -90 degrees
+    description: "Left side survey point"
+    
+  - name: "survey_point_6"
+    x: -3.0
+    y: -3.0
+    z: 0.0
+    yaw: 0.0
+    description: "Left front survey point"
+    
+  - name: "survey_point_7"
+    x: 0.0
+    y: -3.0
+    z: 0.0
+    yaw: 0.0
+    description: "Front side survey point"
+    
+  - name: "survey_point_8"
+    x: 3.0
+    y: -3.0
+    z: 0.0
+    yaw: 0.0
+    description: "Right front survey point"
+    
+  # Extended exploration phase - venture further
+  - name: "exploration_1"
+    x: 8.0
+    y: 2.0
+    z: 0.0
+    yaw: 0.0
+    description: "Extended exploration point 1"
+    
+  - name: "exploration_2"
+    x: 10.0
+    y: -5.0
+    z: 0.0
+    yaw: -1.0
+    description: "Rocky area exploration"
+    
+  - name: "exploration_3"
+    x: 5.0
+    y: -8.0
+    z: 0.0
+    yaw: 2.0
+    description: "South exploration point"
+    
+  - name: "exploration_4"
+    x: -5.0
+    y: -10.0
+    z: 0.0
+    yaw: 1.0
+    description: "Southwest exploration point"
+    
+  - name: "exploration_5"
+    x: -12.0
+    y: -2.0
+    z: 0.0
+    yaw: 0.5
+    description: "West exploration point"
+    
+  - name: "exploration_6"
+    x: -8.0
+    y: 8.0
+    z: 0.0
+    yaw: -0.5
+    description: "Northwest exploration point"
+    
+  - name: "exploration_7"
+    x: 2.0
+    y: 12.0
+    z: 0.0
+    yaw: -1.5
+    description: "North exploration point"
+    
+  - name: "exploration_8"
+    x: 15.0
+    y: 8.0
+    z: 0.0
+    yaw: -2.0
+    description: "Northeast exploration point"
+    
+  # Science waypoints - specific areas of interest
+  - name: "science_site_1"
+    x: 7.0
+    y: 4.0
+    z: 0.0
+    yaw: 0.0
+    description: "Potential rock sample site"
+    
+  - name: "science_site_2"
+    x: -6.0
+    y: -7.0
+    z: 0.0
+    yaw: 1.57
+    description: "Terrain feature investigation"
+    
+  - name: "science_site_3"
+    x: 12.0
+    y: -3.0
+    z: 0.0
+    yaw: -1.57
+    description: "Geological formation study"
+    
+  # Return to base
+  - name: "return_waypoint"
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    description: "Return to starting position"
+
+# Mission configuration
+mission_config:
+  loop_waypoints: false
+  waypoint_tolerance: 0.5
+  max_retries_per_waypoint: 3
+  retry_delay: 5.0
+  abort_on_failure: false
+  
+# Safety parameters
+safety_config:
+  max_distance_from_base: 20.0
+  emergency_return_threshold: 15.0
+  obstacle_avoidance_enabled: true
+  terrain_analysis_enabled: true
